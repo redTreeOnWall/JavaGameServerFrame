@@ -8,7 +8,7 @@
     <artifactId>JavaGameServerFrame</artifactId>
     <version>1.0-SNAPSHOT</version>
     <properties>
-        <main.class>lirunlong.main.MainClass</main.class>
+        <main.class>lirunlong.main.MainObj</main.class>
     </properties>
 
     <dependencies>

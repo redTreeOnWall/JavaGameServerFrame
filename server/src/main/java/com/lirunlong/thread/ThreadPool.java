@@ -31,7 +31,6 @@ class ThreadPoolWorker implements Runnable{
     ThreadPoolWorker(ThreadPool pool){
         this.threadPool = pool;
     }
-
     @Override
     public void run() {
         while(isRunning){
