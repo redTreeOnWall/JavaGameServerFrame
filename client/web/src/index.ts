@@ -1,6 +1,6 @@
 
 import * as THREE from "three";
-
+import { Player } from "./ccss/Player";
 
 //创建场景.
 let scene = new THREE.Scene();
@@ -35,3 +35,6 @@ function animate()
     renderer.render(scene, camera);
 }
 animate();
+
+let me = new Player("lee")
+me.say("hello game")

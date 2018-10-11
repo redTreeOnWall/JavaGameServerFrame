@@ -13,7 +13,7 @@ module.exports = {
     //模块加载器设置
     module: {
         rules: [
-            { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
+            { test: /\.tsx?$/, loader: "ts-loader" },
         ]
     },
     //调试服务
