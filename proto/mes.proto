@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option java_package = "com.lirunlong.mes"; 
+
+message TestMes {
+  string mes = 1;
+  int32 mesId = 2;
+}
+
+message CubeRotation{
+        Vector3 vector3 = 1;
+}
+
+message Vector3{
+        float x =1;
+        float y =2;
+        float z =3;
+}

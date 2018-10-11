@@ -13,8 +13,16 @@ module.exports = {
     //模块加载器设置
     module: {
         rules: [
-            { test: /\.tsx?$/, loader: "ts-loader" },
+            {
+                test: /\.tsx?$/,
+                loader: "ts-loader",
+                exclude: /node_modules/
+            },
         ]
+    },
+    //自动识别后缀
+    resolve: {
+        extensions: ['.tsx', '.ts', '.js']
     },
     //调试服务
     devServer: {
@@ -24,9 +32,6 @@ module.exports = {
     },
     //插件
     plugins: [
-        new HtmlWebPackPlugin(
-            {
-                title: "threejs学习"
-            }),
+        new HtmlWebPackPlugin( { title: "threejs学习" }),
     ]
 }

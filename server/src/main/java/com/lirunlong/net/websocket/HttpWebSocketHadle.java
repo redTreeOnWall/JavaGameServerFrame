@@ -22,6 +22,9 @@ import java.util.List;
 
 public class HttpWebSocketHadle extends SimpleChannelInboundHandler<Object> {
 
+    public HttpWebSocketHadle(){
+        addHandler(new TestHandle());
+    }
 
     private WebSocketServerHandshaker handshaker;
 

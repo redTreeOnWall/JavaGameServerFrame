@@ -24,9 +24,6 @@ public class WebsocketServerHandler extends ChannelInboundHandlerAdapter {
         if(isConnectionUpgrade && isWebSocket){
             System.out.println("new websocket get");
             System.out.println(this.hashCode());
-
-
-
         }else{
             ctx.write(Unpooled.copiedBuffer("not websocket".getBytes()));
             ctx.flush();
