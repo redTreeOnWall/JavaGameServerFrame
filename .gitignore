@@ -131,3 +131,8 @@ Icon
 !wrapper/*.jar
 !**/wrapper/*.jar
 
+## node 
+node_modules/
+dist/
+
+
