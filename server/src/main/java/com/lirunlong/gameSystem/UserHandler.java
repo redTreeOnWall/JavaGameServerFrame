@@ -9,11 +9,20 @@ import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.http.websocketx.BinaryWebSocketFrame;
 
+
+/**
+ * 表示一个用户，对应一个网络连接
+ */
 public class UserHandler {
+    public enum UserState{
+        Normal,
+        DisConected,
+    }
+
+    public UserState state = UserState.Normal;
     private UserManager uMng(){
         return Game.getInstance().getUserManager();
     }
-
     private User user;
     private ChannelHandlerContext ctx;
     public void SendMes(Mes.Msg mes){

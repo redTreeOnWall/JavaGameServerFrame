@@ -8,6 +8,10 @@ export class Game {
     public gameloopMap: Map<GameLoop> = new Map()
     public gameManager: GameManager =  new GameManager()
 
+    time = {
+        deltTime:25
+    }
+
     public add(l:GameLoop){
 
         if(this.gameloopMap.has(l.id)){

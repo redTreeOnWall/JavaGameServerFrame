@@ -1,10 +1,10 @@
 package com.lirunlong.gameSystem;
 
-import java.util.Hashtable;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class UserManager {
-    public Hashtable<String,UserHandler> users =  new Hashtable<>();
+    public ConcurrentHashMap<String,UserHandler> users =  new ConcurrentHashMap<String,UserHandler>();
     public void showUsers(){
         System.out.println("=======================");
         System.out.println("cout:"+users.size());

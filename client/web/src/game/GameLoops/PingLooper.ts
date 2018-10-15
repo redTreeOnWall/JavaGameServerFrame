@@ -9,10 +9,6 @@ export class PingLooper implements GameLoop{
     inPing = false
     update(){
         let t = this.getTime()
-        if(!this.inPing ){ 
-            this.ping()
-        }
-        return;
         if(!this.inPing && t - this.lastSendTime >= 3000){ 
             this.ping()
         }

@@ -2,6 +2,7 @@ import { Game } from "./game/Game";
 import { NetConnecter } from "./net/NetConnecter";
 import { Msg, MesId, Ping, C_Login } from "./mes/mes";
 import { PingLooper } from "./game/GameLoops/PingLooper";
+import { ThreeLooper } from "./game/GameLoops/ThreeLoop";
 
 
 
@@ -13,6 +14,7 @@ var net = NetConnecter.ins()
 
 let onLogin = ()=>{
     game.add(new PingLooper())
+    game.add(new ThreeLooper())
 }
 
 net.AddConnectListener(() => {
