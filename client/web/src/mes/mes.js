@@ -9,6 +9,166 @@ var $Reader = $protobuf.Reader, $Writer = $protobuf.Writer, $util = $protobuf.ut
 // Exported root namespace
 var $root = $protobuf.roots["default"] || ($protobuf.roots["default"] = {});
 
+$root.Ping = (function() {
+
+    /**
+     * Properties of a Ping.
+     * @exports IPing
+     * @interface IPing
+     */
+
+    /**
+     * Constructs a new Ping.
+     * @exports Ping
+     * @classdesc Represents a Ping.
+     * @implements IPing
+     * @constructor
+     * @param {IPing=} [properties] Properties to set
+     */
+    function Ping(properties) {
+        if (properties)
+            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                if (properties[keys[i]] != null)
+                    this[keys[i]] = properties[keys[i]];
+    }
+
+    /**
+     * Creates a new Ping instance using the specified properties.
+     * @function create
+     * @memberof Ping
+     * @static
+     * @param {IPing=} [properties] Properties to set
+     * @returns {Ping} Ping instance
+     */
+    Ping.create = function create(properties) {
+        return new Ping(properties);
+    };
+
+    /**
+     * Encodes the specified Ping message. Does not implicitly {@link Ping.verify|verify} messages.
+     * @function encode
+     * @memberof Ping
+     * @static
+     * @param {IPing} message Ping message or plain object to encode
+     * @param {$protobuf.Writer} [writer] Writer to encode to
+     * @returns {$protobuf.Writer} Writer
+     */
+    Ping.encode = function encode(message, writer) {
+        if (!writer)
+            writer = $Writer.create();
+        return writer;
+    };
+
+    /**
+     * Encodes the specified Ping message, length delimited. Does not implicitly {@link Ping.verify|verify} messages.
+     * @function encodeDelimited
+     * @memberof Ping
+     * @static
+     * @param {IPing} message Ping message or plain object to encode
+     * @param {$protobuf.Writer} [writer] Writer to encode to
+     * @returns {$protobuf.Writer} Writer
+     */
+    Ping.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+    };
+
+    /**
+     * Decodes a Ping message from the specified reader or buffer.
+     * @function decode
+     * @memberof Ping
+     * @static
+     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+     * @param {number} [length] Message length if known beforehand
+     * @returns {Ping} Ping
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    Ping.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader))
+            reader = $Reader.create(reader);
+        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.Ping();
+        while (reader.pos < end) {
+            var tag = reader.uint32();
+            switch (tag >>> 3) {
+            default:
+                reader.skipType(tag & 7);
+                break;
+            }
+        }
+        return message;
+    };
+
+    /**
+     * Decodes a Ping message from the specified reader or buffer, length delimited.
+     * @function decodeDelimited
+     * @memberof Ping
+     * @static
+     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+     * @returns {Ping} Ping
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    Ping.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader))
+            reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+    };
+
+    /**
+     * Verifies a Ping message.
+     * @function verify
+     * @memberof Ping
+     * @static
+     * @param {Object.<string,*>} message Plain object to verify
+     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+     */
+    Ping.verify = function verify(message) {
+        if (typeof message !== "object" || message === null)
+            return "object expected";
+        return null;
+    };
+
+    /**
+     * Creates a Ping message from a plain object. Also converts values to their respective internal types.
+     * @function fromObject
+     * @memberof Ping
+     * @static
+     * @param {Object.<string,*>} object Plain object
+     * @returns {Ping} Ping
+     */
+    Ping.fromObject = function fromObject(object) {
+        if (object instanceof $root.Ping)
+            return object;
+        return new $root.Ping();
+    };
+
+    /**
+     * Creates a plain object from a Ping message. Also converts values to other types if specified.
+     * @function toObject
+     * @memberof Ping
+     * @static
+     * @param {Ping} message Ping
+     * @param {$protobuf.IConversionOptions} [options] Conversion options
+     * @returns {Object.<string,*>} Plain object
+     */
+    Ping.toObject = function toObject() {
+        return {};
+    };
+
+    /**
+     * Converts this Ping to JSON.
+     * @function toJSON
+     * @memberof Ping
+     * @instance
+     * @returns {Object.<string,*>} JSON object
+     */
+    Ping.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+    };
+
+    return Ping;
+})();
+
 $root.TestMes = (function() {
 
     /**
@@ -217,6 +377,380 @@ $root.TestMes = (function() {
     };
 
     return TestMes;
+})();
+
+$root.C_Login = (function() {
+
+    /**
+     * Properties of a C_Login.
+     * @exports IC_Login
+     * @interface IC_Login
+     * @property {string|null} [userName] C_Login userName
+     */
+
+    /**
+     * Constructs a new C_Login.
+     * @exports C_Login
+     * @classdesc Represents a C_Login.
+     * @implements IC_Login
+     * @constructor
+     * @param {IC_Login=} [properties] Properties to set
+     */
+    function C_Login(properties) {
+        if (properties)
+            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                if (properties[keys[i]] != null)
+                    this[keys[i]] = properties[keys[i]];
+    }
+
+    /**
+     * C_Login userName.
+     * @member {string} userName
+     * @memberof C_Login
+     * @instance
+     */
+    C_Login.prototype.userName = "";
+
+    /**
+     * Creates a new C_Login instance using the specified properties.
+     * @function create
+     * @memberof C_Login
+     * @static
+     * @param {IC_Login=} [properties] Properties to set
+     * @returns {C_Login} C_Login instance
+     */
+    C_Login.create = function create(properties) {
+        return new C_Login(properties);
+    };
+
+    /**
+     * Encodes the specified C_Login message. Does not implicitly {@link C_Login.verify|verify} messages.
+     * @function encode
+     * @memberof C_Login
+     * @static
+     * @param {IC_Login} message C_Login message or plain object to encode
+     * @param {$protobuf.Writer} [writer] Writer to encode to
+     * @returns {$protobuf.Writer} Writer
+     */
+    C_Login.encode = function encode(message, writer) {
+        if (!writer)
+            writer = $Writer.create();
+        if (message.userName != null && message.hasOwnProperty("userName"))
+            writer.uint32(/* id 1, wireType 2 =*/10).string(message.userName);
+        return writer;
+    };
+
+    /**
+     * Encodes the specified C_Login message, length delimited. Does not implicitly {@link C_Login.verify|verify} messages.
+     * @function encodeDelimited
+     * @memberof C_Login
+     * @static
+     * @param {IC_Login} message C_Login message or plain object to encode
+     * @param {$protobuf.Writer} [writer] Writer to encode to
+     * @returns {$protobuf.Writer} Writer
+     */
+    C_Login.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+    };
+
+    /**
+     * Decodes a C_Login message from the specified reader or buffer.
+     * @function decode
+     * @memberof C_Login
+     * @static
+     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+     * @param {number} [length] Message length if known beforehand
+     * @returns {C_Login} C_Login
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    C_Login.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader))
+            reader = $Reader.create(reader);
+        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.C_Login();
+        while (reader.pos < end) {
+            var tag = reader.uint32();
+            switch (tag >>> 3) {
+            case 1:
+                message.userName = reader.string();
+                break;
+            default:
+                reader.skipType(tag & 7);
+                break;
+            }
+        }
+        return message;
+    };
+
+    /**
+     * Decodes a C_Login message from the specified reader or buffer, length delimited.
+     * @function decodeDelimited
+     * @memberof C_Login
+     * @static
+     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+     * @returns {C_Login} C_Login
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    C_Login.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader))
+            reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+    };
+
+    /**
+     * Verifies a C_Login message.
+     * @function verify
+     * @memberof C_Login
+     * @static
+     * @param {Object.<string,*>} message Plain object to verify
+     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+     */
+    C_Login.verify = function verify(message) {
+        if (typeof message !== "object" || message === null)
+            return "object expected";
+        if (message.userName != null && message.hasOwnProperty("userName"))
+            if (!$util.isString(message.userName))
+                return "userName: string expected";
+        return null;
+    };
+
+    /**
+     * Creates a C_Login message from a plain object. Also converts values to their respective internal types.
+     * @function fromObject
+     * @memberof C_Login
+     * @static
+     * @param {Object.<string,*>} object Plain object
+     * @returns {C_Login} C_Login
+     */
+    C_Login.fromObject = function fromObject(object) {
+        if (object instanceof $root.C_Login)
+            return object;
+        var message = new $root.C_Login();
+        if (object.userName != null)
+            message.userName = String(object.userName);
+        return message;
+    };
+
+    /**
+     * Creates a plain object from a C_Login message. Also converts values to other types if specified.
+     * @function toObject
+     * @memberof C_Login
+     * @static
+     * @param {C_Login} message C_Login
+     * @param {$protobuf.IConversionOptions} [options] Conversion options
+     * @returns {Object.<string,*>} Plain object
+     */
+    C_Login.toObject = function toObject(message, options) {
+        if (!options)
+            options = {};
+        var object = {};
+        if (options.defaults)
+            object.userName = "";
+        if (message.userName != null && message.hasOwnProperty("userName"))
+            object.userName = message.userName;
+        return object;
+    };
+
+    /**
+     * Converts this C_Login to JSON.
+     * @function toJSON
+     * @memberof C_Login
+     * @instance
+     * @returns {Object.<string,*>} JSON object
+     */
+    C_Login.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+    };
+
+    return C_Login;
+})();
+
+$root.S_Login = (function() {
+
+    /**
+     * Properties of a S_Login.
+     * @exports IS_Login
+     * @interface IS_Login
+     * @property {number|null} [isSuc] S_Login isSuc
+     */
+
+    /**
+     * Constructs a new S_Login.
+     * @exports S_Login
+     * @classdesc Represents a S_Login.
+     * @implements IS_Login
+     * @constructor
+     * @param {IS_Login=} [properties] Properties to set
+     */
+    function S_Login(properties) {
+        if (properties)
+            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                if (properties[keys[i]] != null)
+                    this[keys[i]] = properties[keys[i]];
+    }
+
+    /**
+     * S_Login isSuc.
+     * @member {number} isSuc
+     * @memberof S_Login
+     * @instance
+     */
+    S_Login.prototype.isSuc = 0;
+
+    /**
+     * Creates a new S_Login instance using the specified properties.
+     * @function create
+     * @memberof S_Login
+     * @static
+     * @param {IS_Login=} [properties] Properties to set
+     * @returns {S_Login} S_Login instance
+     */
+    S_Login.create = function create(properties) {
+        return new S_Login(properties);
+    };
+
+    /**
+     * Encodes the specified S_Login message. Does not implicitly {@link S_Login.verify|verify} messages.
+     * @function encode
+     * @memberof S_Login
+     * @static
+     * @param {IS_Login} message S_Login message or plain object to encode
+     * @param {$protobuf.Writer} [writer] Writer to encode to
+     * @returns {$protobuf.Writer} Writer
+     */
+    S_Login.encode = function encode(message, writer) {
+        if (!writer)
+            writer = $Writer.create();
+        if (message.isSuc != null && message.hasOwnProperty("isSuc"))
+            writer.uint32(/* id 1, wireType 0 =*/8).int32(message.isSuc);
+        return writer;
+    };
+
+    /**
+     * Encodes the specified S_Login message, length delimited. Does not implicitly {@link S_Login.verify|verify} messages.
+     * @function encodeDelimited
+     * @memberof S_Login
+     * @static
+     * @param {IS_Login} message S_Login message or plain object to encode
+     * @param {$protobuf.Writer} [writer] Writer to encode to
+     * @returns {$protobuf.Writer} Writer
+     */
+    S_Login.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+    };
+
+    /**
+     * Decodes a S_Login message from the specified reader or buffer.
+     * @function decode
+     * @memberof S_Login
+     * @static
+     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+     * @param {number} [length] Message length if known beforehand
+     * @returns {S_Login} S_Login
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    S_Login.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader))
+            reader = $Reader.create(reader);
+        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.S_Login();
+        while (reader.pos < end) {
+            var tag = reader.uint32();
+            switch (tag >>> 3) {
+            case 1:
+                message.isSuc = reader.int32();
+                break;
+            default:
+                reader.skipType(tag & 7);
+                break;
+            }
+        }
+        return message;
+    };
+
+    /**
+     * Decodes a S_Login message from the specified reader or buffer, length delimited.
+     * @function decodeDelimited
+     * @memberof S_Login
+     * @static
+     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+     * @returns {S_Login} S_Login
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    S_Login.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader))
+            reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+    };
+
+    /**
+     * Verifies a S_Login message.
+     * @function verify
+     * @memberof S_Login
+     * @static
+     * @param {Object.<string,*>} message Plain object to verify
+     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+     */
+    S_Login.verify = function verify(message) {
+        if (typeof message !== "object" || message === null)
+            return "object expected";
+        if (message.isSuc != null && message.hasOwnProperty("isSuc"))
+            if (!$util.isInteger(message.isSuc))
+                return "isSuc: integer expected";
+        return null;
+    };
+
+    /**
+     * Creates a S_Login message from a plain object. Also converts values to their respective internal types.
+     * @function fromObject
+     * @memberof S_Login
+     * @static
+     * @param {Object.<string,*>} object Plain object
+     * @returns {S_Login} S_Login
+     */
+    S_Login.fromObject = function fromObject(object) {
+        if (object instanceof $root.S_Login)
+            return object;
+        var message = new $root.S_Login();
+        if (object.isSuc != null)
+            message.isSuc = object.isSuc | 0;
+        return message;
+    };
+
+    /**
+     * Creates a plain object from a S_Login message. Also converts values to other types if specified.
+     * @function toObject
+     * @memberof S_Login
+     * @static
+     * @param {S_Login} message S_Login
+     * @param {$protobuf.IConversionOptions} [options] Conversion options
+     * @returns {Object.<string,*>} Plain object
+     */
+    S_Login.toObject = function toObject(message, options) {
+        if (!options)
+            options = {};
+        var object = {};
+        if (options.defaults)
+            object.isSuc = 0;
+        if (message.isSuc != null && message.hasOwnProperty("isSuc"))
+            object.isSuc = message.isSuc;
+        return object;
+    };
+
+    /**
+     * Converts this S_Login to JSON.
+     * @function toJSON
+     * @memberof S_Login
+     * @instance
+     * @returns {Object.<string,*>} JSON object
+     */
+    S_Login.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+    };
+
+    return S_Login;
 })();
 
 $root.CubeRotation = (function() {
@@ -641,6 +1175,316 @@ $root.Vector3 = (function() {
     };
 
     return Vector3;
+})();
+
+/**
+ * MesId enum.
+ * @exports MesId
+ * @enum {string}
+ * @property {number} m_First=0 m_First value
+ * @property {number} m_Ping=11 m_Ping value
+ * @property {number} m_C_Login=12 m_C_Login value
+ * @property {number} m_S_Login=13 m_S_Login value
+ */
+$root.MesId = (function() {
+    var valuesById = {}, values = Object.create(valuesById);
+    values[valuesById[0] = "m_First"] = 0;
+    values[valuesById[11] = "m_Ping"] = 11;
+    values[valuesById[12] = "m_C_Login"] = 12;
+    values[valuesById[13] = "m_S_Login"] = 13;
+    return values;
+})();
+
+$root.Msg = (function() {
+
+    /**
+     * Properties of a Msg.
+     * @exports IMsg
+     * @interface IMsg
+     * @property {MesId|null} [mesId] Msg mesId
+     * @property {IPing|null} [ping] Msg ping
+     * @property {IC_Login|null} [cLogin] Msg cLogin
+     * @property {IS_Login|null} [sLogin] Msg sLogin
+     */
+
+    /**
+     * Constructs a new Msg.
+     * @exports Msg
+     * @classdesc Represents a Msg.
+     * @implements IMsg
+     * @constructor
+     * @param {IMsg=} [properties] Properties to set
+     */
+    function Msg(properties) {
+        if (properties)
+            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                if (properties[keys[i]] != null)
+                    this[keys[i]] = properties[keys[i]];
+    }
+
+    /**
+     * Msg mesId.
+     * @member {MesId} mesId
+     * @memberof Msg
+     * @instance
+     */
+    Msg.prototype.mesId = 0;
+
+    /**
+     * Msg ping.
+     * @member {IPing|null|undefined} ping
+     * @memberof Msg
+     * @instance
+     */
+    Msg.prototype.ping = null;
+
+    /**
+     * Msg cLogin.
+     * @member {IC_Login|null|undefined} cLogin
+     * @memberof Msg
+     * @instance
+     */
+    Msg.prototype.cLogin = null;
+
+    /**
+     * Msg sLogin.
+     * @member {IS_Login|null|undefined} sLogin
+     * @memberof Msg
+     * @instance
+     */
+    Msg.prototype.sLogin = null;
+
+    /**
+     * Creates a new Msg instance using the specified properties.
+     * @function create
+     * @memberof Msg
+     * @static
+     * @param {IMsg=} [properties] Properties to set
+     * @returns {Msg} Msg instance
+     */
+    Msg.create = function create(properties) {
+        return new Msg(properties);
+    };
+
+    /**
+     * Encodes the specified Msg message. Does not implicitly {@link Msg.verify|verify} messages.
+     * @function encode
+     * @memberof Msg
+     * @static
+     * @param {IMsg} message Msg message or plain object to encode
+     * @param {$protobuf.Writer} [writer] Writer to encode to
+     * @returns {$protobuf.Writer} Writer
+     */
+    Msg.encode = function encode(message, writer) {
+        if (!writer)
+            writer = $Writer.create();
+        if (message.mesId != null && message.hasOwnProperty("mesId"))
+            writer.uint32(/* id 1, wireType 0 =*/8).int32(message.mesId);
+        if (message.ping != null && message.hasOwnProperty("ping"))
+            $root.Ping.encode(message.ping, writer.uint32(/* id 11, wireType 2 =*/90).fork()).ldelim();
+        if (message.cLogin != null && message.hasOwnProperty("cLogin"))
+            $root.C_Login.encode(message.cLogin, writer.uint32(/* id 12, wireType 2 =*/98).fork()).ldelim();
+        if (message.sLogin != null && message.hasOwnProperty("sLogin"))
+            $root.S_Login.encode(message.sLogin, writer.uint32(/* id 13, wireType 2 =*/106).fork()).ldelim();
+        return writer;
+    };
+
+    /**
+     * Encodes the specified Msg message, length delimited. Does not implicitly {@link Msg.verify|verify} messages.
+     * @function encodeDelimited
+     * @memberof Msg
+     * @static
+     * @param {IMsg} message Msg message or plain object to encode
+     * @param {$protobuf.Writer} [writer] Writer to encode to
+     * @returns {$protobuf.Writer} Writer
+     */
+    Msg.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+    };
+
+    /**
+     * Decodes a Msg message from the specified reader or buffer.
+     * @function decode
+     * @memberof Msg
+     * @static
+     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+     * @param {number} [length] Message length if known beforehand
+     * @returns {Msg} Msg
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    Msg.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader))
+            reader = $Reader.create(reader);
+        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.Msg();
+        while (reader.pos < end) {
+            var tag = reader.uint32();
+            switch (tag >>> 3) {
+            case 1:
+                message.mesId = reader.int32();
+                break;
+            case 11:
+                message.ping = $root.Ping.decode(reader, reader.uint32());
+                break;
+            case 12:
+                message.cLogin = $root.C_Login.decode(reader, reader.uint32());
+                break;
+            case 13:
+                message.sLogin = $root.S_Login.decode(reader, reader.uint32());
+                break;
+            default:
+                reader.skipType(tag & 7);
+                break;
+            }
+        }
+        return message;
+    };
+
+    /**
+     * Decodes a Msg message from the specified reader or buffer, length delimited.
+     * @function decodeDelimited
+     * @memberof Msg
+     * @static
+     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+     * @returns {Msg} Msg
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    Msg.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader))
+            reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+    };
+
+    /**
+     * Verifies a Msg message.
+     * @function verify
+     * @memberof Msg
+     * @static
+     * @param {Object.<string,*>} message Plain object to verify
+     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+     */
+    Msg.verify = function verify(message) {
+        if (typeof message !== "object" || message === null)
+            return "object expected";
+        if (message.mesId != null && message.hasOwnProperty("mesId"))
+            switch (message.mesId) {
+            default:
+                return "mesId: enum value expected";
+            case 0:
+            case 11:
+            case 12:
+            case 13:
+                break;
+            }
+        if (message.ping != null && message.hasOwnProperty("ping")) {
+            var error = $root.Ping.verify(message.ping);
+            if (error)
+                return "ping." + error;
+        }
+        if (message.cLogin != null && message.hasOwnProperty("cLogin")) {
+            var error = $root.C_Login.verify(message.cLogin);
+            if (error)
+                return "cLogin." + error;
+        }
+        if (message.sLogin != null && message.hasOwnProperty("sLogin")) {
+            var error = $root.S_Login.verify(message.sLogin);
+            if (error)
+                return "sLogin." + error;
+        }
+        return null;
+    };
+
+    /**
+     * Creates a Msg message from a plain object. Also converts values to their respective internal types.
+     * @function fromObject
+     * @memberof Msg
+     * @static
+     * @param {Object.<string,*>} object Plain object
+     * @returns {Msg} Msg
+     */
+    Msg.fromObject = function fromObject(object) {
+        if (object instanceof $root.Msg)
+            return object;
+        var message = new $root.Msg();
+        switch (object.mesId) {
+        case "m_First":
+        case 0:
+            message.mesId = 0;
+            break;
+        case "m_Ping":
+        case 11:
+            message.mesId = 11;
+            break;
+        case "m_C_Login":
+        case 12:
+            message.mesId = 12;
+            break;
+        case "m_S_Login":
+        case 13:
+            message.mesId = 13;
+            break;
+        }
+        if (object.ping != null) {
+            if (typeof object.ping !== "object")
+                throw TypeError(".Msg.ping: object expected");
+            message.ping = $root.Ping.fromObject(object.ping);
+        }
+        if (object.cLogin != null) {
+            if (typeof object.cLogin !== "object")
+                throw TypeError(".Msg.cLogin: object expected");
+            message.cLogin = $root.C_Login.fromObject(object.cLogin);
+        }
+        if (object.sLogin != null) {
+            if (typeof object.sLogin !== "object")
+                throw TypeError(".Msg.sLogin: object expected");
+            message.sLogin = $root.S_Login.fromObject(object.sLogin);
+        }
+        return message;
+    };
+
+    /**
+     * Creates a plain object from a Msg message. Also converts values to other types if specified.
+     * @function toObject
+     * @memberof Msg
+     * @static
+     * @param {Msg} message Msg
+     * @param {$protobuf.IConversionOptions} [options] Conversion options
+     * @returns {Object.<string,*>} Plain object
+     */
+    Msg.toObject = function toObject(message, options) {
+        if (!options)
+            options = {};
+        var object = {};
+        if (options.defaults) {
+            object.mesId = options.enums === String ? "m_First" : 0;
+            object.ping = null;
+            object.cLogin = null;
+            object.sLogin = null;
+        }
+        if (message.mesId != null && message.hasOwnProperty("mesId"))
+            object.mesId = options.enums === String ? $root.MesId[message.mesId] : message.mesId;
+        if (message.ping != null && message.hasOwnProperty("ping"))
+            object.ping = $root.Ping.toObject(message.ping, options);
+        if (message.cLogin != null && message.hasOwnProperty("cLogin"))
+            object.cLogin = $root.C_Login.toObject(message.cLogin, options);
+        if (message.sLogin != null && message.hasOwnProperty("sLogin"))
+            object.sLogin = $root.S_Login.toObject(message.sLogin, options);
+        return object;
+    };
+
+    /**
+     * Converts this Msg to JSON.
+     * @function toJSON
+     * @memberof Msg
+     * @instance
+     * @returns {Object.<string,*>} JSON object
+     */
+    Msg.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+    };
+
+    return Msg;
 })();
 
 module.exports = $root;

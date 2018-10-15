@@ -2,7 +2,7 @@ var path = require('path');
 var HtmlWebPackPlugin = require("html-webpack-plugin");
 module.exports = {
     //项目入口
-    entry: "./src/index.ts",
+    entry: "./src/Main.ts",
     //输出设置
     output: {
         filename: "bundle.js",

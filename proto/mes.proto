@@ -2,17 +2,69 @@ syntax = "proto3";
 
 option java_package = "com.lirunlong.mes"; 
 
+
+// MesBody
+message Ping{}
+
 message TestMes {
   string mes = 1;
   int32 mesId = 2;
 }
 
-message CubeRotation{
-        Vector3 vector3 = 1;
+message C_Login{
+  string userName = 1;
 }
 
-message Vector3{
-        float x =1;
-        float y =2;
-        float z =3;
+message S_Login{
+  int32 isSuc = 1;
 }
+
+message CubeRotation{
+  Vector3 vector3 = 1;
+}
+
+
+//--- struct
+message Vector3{
+  float x =1;
+  float y =2;
+  float z =3;
+}
+
+
+//TODO: auto code
+// === mesId
+enum MesId{
+  m_First = 0;
+  m_Ping = 11;
+  m_C_Login =12;
+  m_S_Login  =13;
+}
+
+// +++ mes
+message Msg{
+  MesId mesId =1;
+
+  Ping ping = 11; 
+  C_Login c_login = 12;
+  S_Login s_login = 13;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

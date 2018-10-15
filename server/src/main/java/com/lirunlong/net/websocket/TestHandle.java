@@ -1,6 +1,8 @@
 package com.lirunlong.net.websocket;
 
 import com.google.protobuf.InvalidProtocolBufferException;
+import com.lirunlong.gameSystem.Game;
+import com.lirunlong.gameSystem.UserHandler;
 import com.lirunlong.mes.Mes;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
@@ -9,8 +11,10 @@ import io.netty.handler.codec.http.websocketx.BinaryWebSocketFrame;
 import io.netty.handler.codec.http.websocketx.WebSocketFrame;
 
 public class TestHandle implements IWebSocketMesHandle{
+    private UserHandler userHandler =  new UserHandler();
     @Override
     public void onFrameGet(ChannelHandlerContext ctx, WebSocketFrame frame) {
+        userHandler.setCtx(ctx);
         if(frame instanceof BinaryWebSocketFrame){
             BinaryWebSocketFrame da = (BinaryWebSocketFrame)frame;
 
@@ -18,29 +22,30 @@ public class TestHandle implements IWebSocketMesHandle{
 
             byte[] array = new byte[buf.capacity()];
             buf.readBytes(array);
-            Mes.CubeRotation rot = null;
             try {
-                rot = Mes.CubeRotation.parseFrom(array);
+                Mes.Msg m = Mes.Msg.parseFrom(array);
+                userHandler.OnMesGet(m);
             } catch (InvalidProtocolBufferException e) {
-                e.printStackTrace();
+                System.out.println("onSuprted messageType");
             }
-            System.out.println(rot.getVector3().getX());
-
         }
     }
 
     @Override
     public void onConnected(ChannelHandlerContext ctx, FullHttpRequest req) {
-
     }
 
     @Override
     public void onClose() {
-
+        userHandler.onErrOrClose();
     }
 
     @Override
     public void onErr() {
+        userHandler.onErrOrClose();
+    }
+
+    private void removeUserHandle(){
 
     }
 }

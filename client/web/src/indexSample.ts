@@ -27,34 +27,36 @@ camera.position.z = 5;
 
 let ws = new WebSocket("ws://localhost:5050");
 let wsIsConnencted = false
-ws.onopen = (e)=>{
+ws.onopen = (e) => {
     console.log("connected")
     wsIsConnencted = true
 }
 
-ws.onmessage = (e:MessageEvent)=>{
+ws.onmessage = (e: MessageEvent) => {
     console.log(e.data)
 }
 
+var run = true;
 
 //渲染循环
-function animate()
-{
-    requestAnimationFrame(animate);
-    cube.rotation.x+= 0.1;
-    cube.rotation.y+= 0.01;
-    renderer.render(scene, camera);
+function animate() {
+    if (run == true) {
+        requestAnimationFrame(animate);
+        cube.rotation.x += 0.1;
+        cube.rotation.y += 0.01;
+        renderer.render(scene, camera);
 
-    let r = new Mes.CubeRotation()
-    let v = new Mes.Vector3()
-    v.x = cube.rotation.x
-    v.y = cube.rotation.y
-    r.vector3 =  v;
+        let r = new Mes.CubeRotation()
+        let v = new Mes.Vector3()
+        v.x = cube.rotation.x
+        v.y = cube.rotation.y
+        r.vector3 = v;
 
-    if(wsIsConnencted){
-        let mes =Mes.CubeRotation.encode(r)
-        console.log(mes)
-        ws.send(mes.finish())
+        if (wsIsConnencted) {
+            let mes = Mes.CubeRotation.encode(r)
+            console.log(mes)
+            ws.send(mes.finish())
+        }
     }
 }
 animate();

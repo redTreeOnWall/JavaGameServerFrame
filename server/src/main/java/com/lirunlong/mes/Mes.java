@@ -14,6 +14,522 @@ public final class Mes {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  /**
+   * <pre>
+   *TODO: auto code
+   * === mesId
+   * </pre>
+   *
+   * Protobuf enum {@code MesId}
+   */
+  public enum MesId
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>m_First = 0;</code>
+     */
+    m_First(0),
+    /**
+     * <code>m_Ping = 11;</code>
+     */
+    m_Ping(11),
+    /**
+     * <code>m_C_Login = 12;</code>
+     */
+    m_C_Login(12),
+    /**
+     * <code>m_S_Login = 13;</code>
+     */
+    m_S_Login(13),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>m_First = 0;</code>
+     */
+    public static final int m_First_VALUE = 0;
+    /**
+     * <code>m_Ping = 11;</code>
+     */
+    public static final int m_Ping_VALUE = 11;
+    /**
+     * <code>m_C_Login = 12;</code>
+     */
+    public static final int m_C_Login_VALUE = 12;
+    /**
+     * <code>m_S_Login = 13;</code>
+     */
+    public static final int m_S_Login_VALUE = 13;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static MesId valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static MesId forNumber(int value) {
+      switch (value) {
+        case 0: return m_First;
+        case 11: return m_Ping;
+        case 12: return m_C_Login;
+        case 13: return m_S_Login;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<MesId>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        MesId> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<MesId>() {
+            public MesId findValueByNumber(int number) {
+              return MesId.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.lirunlong.mes.Mes.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final MesId[] VALUES = values();
+
+    public static MesId valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private MesId(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:MesId)
+  }
+
+  public interface PingOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Ping)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MesBody
+   * </pre>
+   *
+   * Protobuf type {@code Ping}
+   */
+  public  static final class Ping extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:Ping)
+      PingOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Ping.newBuilder() to construct.
+    private Ping(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Ping() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Ping(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lirunlong.mes.Mes.internal_static_Ping_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lirunlong.mes.Mes.internal_static_Ping_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lirunlong.mes.Mes.Ping.class, com.lirunlong.mes.Mes.Ping.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lirunlong.mes.Mes.Ping)) {
+        return super.equals(obj);
+      }
+      com.lirunlong.mes.Mes.Ping other = (com.lirunlong.mes.Mes.Ping) obj;
+
+      boolean result = true;
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lirunlong.mes.Mes.Ping parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lirunlong.mes.Mes.Ping parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lirunlong.mes.Mes.Ping parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lirunlong.mes.Mes.Ping parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lirunlong.mes.Mes.Ping parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lirunlong.mes.Mes.Ping parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lirunlong.mes.Mes.Ping parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lirunlong.mes.Mes.Ping parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lirunlong.mes.Mes.Ping parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.lirunlong.mes.Mes.Ping parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lirunlong.mes.Mes.Ping parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lirunlong.mes.Mes.Ping parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lirunlong.mes.Mes.Ping prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MesBody
+     * </pre>
+     *
+     * Protobuf type {@code Ping}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Ping)
+        com.lirunlong.mes.Mes.PingOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lirunlong.mes.Mes.internal_static_Ping_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lirunlong.mes.Mes.internal_static_Ping_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lirunlong.mes.Mes.Ping.class, com.lirunlong.mes.Mes.Ping.Builder.class);
+      }
+
+      // Construct using com.lirunlong.mes.Mes.Ping.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lirunlong.mes.Mes.internal_static_Ping_descriptor;
+      }
+
+      public com.lirunlong.mes.Mes.Ping getDefaultInstanceForType() {
+        return com.lirunlong.mes.Mes.Ping.getDefaultInstance();
+      }
+
+      public com.lirunlong.mes.Mes.Ping build() {
+        com.lirunlong.mes.Mes.Ping result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.lirunlong.mes.Mes.Ping buildPartial() {
+        com.lirunlong.mes.Mes.Ping result = new com.lirunlong.mes.Mes.Ping(this);
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lirunlong.mes.Mes.Ping) {
+          return mergeFrom((com.lirunlong.mes.Mes.Ping)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lirunlong.mes.Mes.Ping other) {
+        if (other == com.lirunlong.mes.Mes.Ping.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.lirunlong.mes.Mes.Ping parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.lirunlong.mes.Mes.Ping) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:Ping)
+    }
+
+    // @@protoc_insertion_point(class_scope:Ping)
+    private static final com.lirunlong.mes.Mes.Ping DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lirunlong.mes.Mes.Ping();
+    }
+
+    public static com.lirunlong.mes.Mes.Ping getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Ping>
+        PARSER = new com.google.protobuf.AbstractParser<Ping>() {
+      public Ping parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Ping(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Ping> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Ping> getParserForType() {
+      return PARSER;
+    }
+
+    public com.lirunlong.mes.Mes.Ping getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface TestMesOrBuilder extends
       // @@protoc_insertion_point(interface_extends:TestMes)
       com.google.protobuf.MessageOrBuilder {
@@ -597,6 +1113,982 @@ public final class Mes {
     }
 
     public com.lirunlong.mes.Mes.TestMes getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface C_LoginOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:C_Login)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string userName = 1;</code>
+     */
+    java.lang.String getUserName();
+    /**
+     * <code>string userName = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getUserNameBytes();
+  }
+  /**
+   * Protobuf type {@code C_Login}
+   */
+  public  static final class C_Login extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:C_Login)
+      C_LoginOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use C_Login.newBuilder() to construct.
+    private C_Login(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private C_Login() {
+      userName_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private C_Login(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              userName_ = s;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lirunlong.mes.Mes.internal_static_C_Login_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lirunlong.mes.Mes.internal_static_C_Login_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lirunlong.mes.Mes.C_Login.class, com.lirunlong.mes.Mes.C_Login.Builder.class);
+    }
+
+    public static final int USERNAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object userName_;
+    /**
+     * <code>string userName = 1;</code>
+     */
+    public java.lang.String getUserName() {
+      java.lang.Object ref = userName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        userName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string userName = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getUserNameBytes() {
+      java.lang.Object ref = userName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        userName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getUserNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, userName_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getUserNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, userName_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lirunlong.mes.Mes.C_Login)) {
+        return super.equals(obj);
+      }
+      com.lirunlong.mes.Mes.C_Login other = (com.lirunlong.mes.Mes.C_Login) obj;
+
+      boolean result = true;
+      result = result && getUserName()
+          .equals(other.getUserName());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + USERNAME_FIELD_NUMBER;
+      hash = (53 * hash) + getUserName().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lirunlong.mes.Mes.C_Login parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lirunlong.mes.Mes.C_Login parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lirunlong.mes.Mes.C_Login parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lirunlong.mes.Mes.C_Login parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lirunlong.mes.Mes.C_Login parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lirunlong.mes.Mes.C_Login parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lirunlong.mes.Mes.C_Login parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lirunlong.mes.Mes.C_Login parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lirunlong.mes.Mes.C_Login parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.lirunlong.mes.Mes.C_Login parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lirunlong.mes.Mes.C_Login parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lirunlong.mes.Mes.C_Login parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lirunlong.mes.Mes.C_Login prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code C_Login}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:C_Login)
+        com.lirunlong.mes.Mes.C_LoginOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lirunlong.mes.Mes.internal_static_C_Login_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lirunlong.mes.Mes.internal_static_C_Login_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lirunlong.mes.Mes.C_Login.class, com.lirunlong.mes.Mes.C_Login.Builder.class);
+      }
+
+      // Construct using com.lirunlong.mes.Mes.C_Login.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        userName_ = "";
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lirunlong.mes.Mes.internal_static_C_Login_descriptor;
+      }
+
+      public com.lirunlong.mes.Mes.C_Login getDefaultInstanceForType() {
+        return com.lirunlong.mes.Mes.C_Login.getDefaultInstance();
+      }
+
+      public com.lirunlong.mes.Mes.C_Login build() {
+        com.lirunlong.mes.Mes.C_Login result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.lirunlong.mes.Mes.C_Login buildPartial() {
+        com.lirunlong.mes.Mes.C_Login result = new com.lirunlong.mes.Mes.C_Login(this);
+        result.userName_ = userName_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lirunlong.mes.Mes.C_Login) {
+          return mergeFrom((com.lirunlong.mes.Mes.C_Login)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lirunlong.mes.Mes.C_Login other) {
+        if (other == com.lirunlong.mes.Mes.C_Login.getDefaultInstance()) return this;
+        if (!other.getUserName().isEmpty()) {
+          userName_ = other.userName_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.lirunlong.mes.Mes.C_Login parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.lirunlong.mes.Mes.C_Login) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object userName_ = "";
+      /**
+       * <code>string userName = 1;</code>
+       */
+      public java.lang.String getUserName() {
+        java.lang.Object ref = userName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          userName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string userName = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getUserNameBytes() {
+        java.lang.Object ref = userName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          userName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string userName = 1;</code>
+       */
+      public Builder setUserName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        userName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string userName = 1;</code>
+       */
+      public Builder clearUserName() {
+        
+        userName_ = getDefaultInstance().getUserName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string userName = 1;</code>
+       */
+      public Builder setUserNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        userName_ = value;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:C_Login)
+    }
+
+    // @@protoc_insertion_point(class_scope:C_Login)
+    private static final com.lirunlong.mes.Mes.C_Login DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lirunlong.mes.Mes.C_Login();
+    }
+
+    public static com.lirunlong.mes.Mes.C_Login getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<C_Login>
+        PARSER = new com.google.protobuf.AbstractParser<C_Login>() {
+      public C_Login parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new C_Login(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<C_Login> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<C_Login> getParserForType() {
+      return PARSER;
+    }
+
+    public com.lirunlong.mes.Mes.C_Login getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface S_LoginOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:S_Login)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int32 isSuc = 1;</code>
+     */
+    int getIsSuc();
+  }
+  /**
+   * Protobuf type {@code S_Login}
+   */
+  public  static final class S_Login extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:S_Login)
+      S_LoginOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use S_Login.newBuilder() to construct.
+    private S_Login(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private S_Login() {
+      isSuc_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private S_Login(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+
+              isSuc_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lirunlong.mes.Mes.internal_static_S_Login_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lirunlong.mes.Mes.internal_static_S_Login_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lirunlong.mes.Mes.S_Login.class, com.lirunlong.mes.Mes.S_Login.Builder.class);
+    }
+
+    public static final int ISSUC_FIELD_NUMBER = 1;
+    private int isSuc_;
+    /**
+     * <code>int32 isSuc = 1;</code>
+     */
+    public int getIsSuc() {
+      return isSuc_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (isSuc_ != 0) {
+        output.writeInt32(1, isSuc_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (isSuc_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, isSuc_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lirunlong.mes.Mes.S_Login)) {
+        return super.equals(obj);
+      }
+      com.lirunlong.mes.Mes.S_Login other = (com.lirunlong.mes.Mes.S_Login) obj;
+
+      boolean result = true;
+      result = result && (getIsSuc()
+          == other.getIsSuc());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ISSUC_FIELD_NUMBER;
+      hash = (53 * hash) + getIsSuc();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lirunlong.mes.Mes.S_Login parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lirunlong.mes.Mes.S_Login parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lirunlong.mes.Mes.S_Login parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lirunlong.mes.Mes.S_Login parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lirunlong.mes.Mes.S_Login parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lirunlong.mes.Mes.S_Login parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lirunlong.mes.Mes.S_Login parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lirunlong.mes.Mes.S_Login parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lirunlong.mes.Mes.S_Login parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.lirunlong.mes.Mes.S_Login parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lirunlong.mes.Mes.S_Login parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lirunlong.mes.Mes.S_Login parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lirunlong.mes.Mes.S_Login prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code S_Login}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:S_Login)
+        com.lirunlong.mes.Mes.S_LoginOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lirunlong.mes.Mes.internal_static_S_Login_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lirunlong.mes.Mes.internal_static_S_Login_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lirunlong.mes.Mes.S_Login.class, com.lirunlong.mes.Mes.S_Login.Builder.class);
+      }
+
+      // Construct using com.lirunlong.mes.Mes.S_Login.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        isSuc_ = 0;
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lirunlong.mes.Mes.internal_static_S_Login_descriptor;
+      }
+
+      public com.lirunlong.mes.Mes.S_Login getDefaultInstanceForType() {
+        return com.lirunlong.mes.Mes.S_Login.getDefaultInstance();
+      }
+
+      public com.lirunlong.mes.Mes.S_Login build() {
+        com.lirunlong.mes.Mes.S_Login result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.lirunlong.mes.Mes.S_Login buildPartial() {
+        com.lirunlong.mes.Mes.S_Login result = new com.lirunlong.mes.Mes.S_Login(this);
+        result.isSuc_ = isSuc_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lirunlong.mes.Mes.S_Login) {
+          return mergeFrom((com.lirunlong.mes.Mes.S_Login)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lirunlong.mes.Mes.S_Login other) {
+        if (other == com.lirunlong.mes.Mes.S_Login.getDefaultInstance()) return this;
+        if (other.getIsSuc() != 0) {
+          setIsSuc(other.getIsSuc());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.lirunlong.mes.Mes.S_Login parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.lirunlong.mes.Mes.S_Login) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int isSuc_ ;
+      /**
+       * <code>int32 isSuc = 1;</code>
+       */
+      public int getIsSuc() {
+        return isSuc_;
+      }
+      /**
+       * <code>int32 isSuc = 1;</code>
+       */
+      public Builder setIsSuc(int value) {
+        
+        isSuc_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 isSuc = 1;</code>
+       */
+      public Builder clearIsSuc() {
+        
+        isSuc_ = 0;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:S_Login)
+    }
+
+    // @@protoc_insertion_point(class_scope:S_Login)
+    private static final com.lirunlong.mes.Mes.S_Login DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lirunlong.mes.Mes.S_Login();
+    }
+
+    public static com.lirunlong.mes.Mes.S_Login getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<S_Login>
+        PARSER = new com.google.protobuf.AbstractParser<S_Login>() {
+      public S_Login parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new S_Login(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<S_Login> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<S_Login> getParserForType() {
+      return PARSER;
+    }
+
+    public com.lirunlong.mes.Mes.S_Login getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1204,6 +2696,10 @@ public final class Mes {
     float getZ();
   }
   /**
+   * <pre>
+   *--- struct
+   * </pre>
+   *
    * Protobuf type {@code Vector3}
    */
   public  static final class Vector3 extends
@@ -1501,6 +2997,10 @@ public final class Mes {
       return builder;
     }
     /**
+     * <pre>
+     *--- struct
+     * </pre>
+     *
      * Protobuf type {@code Vector3}
      */
     public static final class Builder extends
@@ -1770,11 +3270,1096 @@ public final class Mes {
 
   }
 
+  public interface MsgOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Msg)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.MesId mesId = 1;</code>
+     */
+    int getMesIdValue();
+    /**
+     * <code>.MesId mesId = 1;</code>
+     */
+    com.lirunlong.mes.Mes.MesId getMesId();
+
+    /**
+     * <code>.Ping ping = 11;</code>
+     */
+    boolean hasPing();
+    /**
+     * <code>.Ping ping = 11;</code>
+     */
+    com.lirunlong.mes.Mes.Ping getPing();
+    /**
+     * <code>.Ping ping = 11;</code>
+     */
+    com.lirunlong.mes.Mes.PingOrBuilder getPingOrBuilder();
+
+    /**
+     * <code>.C_Login c_login = 12;</code>
+     */
+    boolean hasCLogin();
+    /**
+     * <code>.C_Login c_login = 12;</code>
+     */
+    com.lirunlong.mes.Mes.C_Login getCLogin();
+    /**
+     * <code>.C_Login c_login = 12;</code>
+     */
+    com.lirunlong.mes.Mes.C_LoginOrBuilder getCLoginOrBuilder();
+
+    /**
+     * <code>.S_Login s_login = 13;</code>
+     */
+    boolean hasSLogin();
+    /**
+     * <code>.S_Login s_login = 13;</code>
+     */
+    com.lirunlong.mes.Mes.S_Login getSLogin();
+    /**
+     * <code>.S_Login s_login = 13;</code>
+     */
+    com.lirunlong.mes.Mes.S_LoginOrBuilder getSLoginOrBuilder();
+  }
+  /**
+   * <pre>
+   * +++ mes
+   * </pre>
+   *
+   * Protobuf type {@code Msg}
+   */
+  public  static final class Msg extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:Msg)
+      MsgOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Msg.newBuilder() to construct.
+    private Msg(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Msg() {
+      mesId_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Msg(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              int rawValue = input.readEnum();
+
+              mesId_ = rawValue;
+              break;
+            }
+            case 90: {
+              com.lirunlong.mes.Mes.Ping.Builder subBuilder = null;
+              if (ping_ != null) {
+                subBuilder = ping_.toBuilder();
+              }
+              ping_ = input.readMessage(com.lirunlong.mes.Mes.Ping.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(ping_);
+                ping_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 98: {
+              com.lirunlong.mes.Mes.C_Login.Builder subBuilder = null;
+              if (cLogin_ != null) {
+                subBuilder = cLogin_.toBuilder();
+              }
+              cLogin_ = input.readMessage(com.lirunlong.mes.Mes.C_Login.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(cLogin_);
+                cLogin_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 106: {
+              com.lirunlong.mes.Mes.S_Login.Builder subBuilder = null;
+              if (sLogin_ != null) {
+                subBuilder = sLogin_.toBuilder();
+              }
+              sLogin_ = input.readMessage(com.lirunlong.mes.Mes.S_Login.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(sLogin_);
+                sLogin_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lirunlong.mes.Mes.internal_static_Msg_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lirunlong.mes.Mes.internal_static_Msg_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lirunlong.mes.Mes.Msg.class, com.lirunlong.mes.Mes.Msg.Builder.class);
+    }
+
+    public static final int MESID_FIELD_NUMBER = 1;
+    private int mesId_;
+    /**
+     * <code>.MesId mesId = 1;</code>
+     */
+    public int getMesIdValue() {
+      return mesId_;
+    }
+    /**
+     * <code>.MesId mesId = 1;</code>
+     */
+    public com.lirunlong.mes.Mes.MesId getMesId() {
+      com.lirunlong.mes.Mes.MesId result = com.lirunlong.mes.Mes.MesId.valueOf(mesId_);
+      return result == null ? com.lirunlong.mes.Mes.MesId.UNRECOGNIZED : result;
+    }
+
+    public static final int PING_FIELD_NUMBER = 11;
+    private com.lirunlong.mes.Mes.Ping ping_;
+    /**
+     * <code>.Ping ping = 11;</code>
+     */
+    public boolean hasPing() {
+      return ping_ != null;
+    }
+    /**
+     * <code>.Ping ping = 11;</code>
+     */
+    public com.lirunlong.mes.Mes.Ping getPing() {
+      return ping_ == null ? com.lirunlong.mes.Mes.Ping.getDefaultInstance() : ping_;
+    }
+    /**
+     * <code>.Ping ping = 11;</code>
+     */
+    public com.lirunlong.mes.Mes.PingOrBuilder getPingOrBuilder() {
+      return getPing();
+    }
+
+    public static final int C_LOGIN_FIELD_NUMBER = 12;
+    private com.lirunlong.mes.Mes.C_Login cLogin_;
+    /**
+     * <code>.C_Login c_login = 12;</code>
+     */
+    public boolean hasCLogin() {
+      return cLogin_ != null;
+    }
+    /**
+     * <code>.C_Login c_login = 12;</code>
+     */
+    public com.lirunlong.mes.Mes.C_Login getCLogin() {
+      return cLogin_ == null ? com.lirunlong.mes.Mes.C_Login.getDefaultInstance() : cLogin_;
+    }
+    /**
+     * <code>.C_Login c_login = 12;</code>
+     */
+    public com.lirunlong.mes.Mes.C_LoginOrBuilder getCLoginOrBuilder() {
+      return getCLogin();
+    }
+
+    public static final int S_LOGIN_FIELD_NUMBER = 13;
+    private com.lirunlong.mes.Mes.S_Login sLogin_;
+    /**
+     * <code>.S_Login s_login = 13;</code>
+     */
+    public boolean hasSLogin() {
+      return sLogin_ != null;
+    }
+    /**
+     * <code>.S_Login s_login = 13;</code>
+     */
+    public com.lirunlong.mes.Mes.S_Login getSLogin() {
+      return sLogin_ == null ? com.lirunlong.mes.Mes.S_Login.getDefaultInstance() : sLogin_;
+    }
+    /**
+     * <code>.S_Login s_login = 13;</code>
+     */
+    public com.lirunlong.mes.Mes.S_LoginOrBuilder getSLoginOrBuilder() {
+      return getSLogin();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (mesId_ != com.lirunlong.mes.Mes.MesId.m_First.getNumber()) {
+        output.writeEnum(1, mesId_);
+      }
+      if (ping_ != null) {
+        output.writeMessage(11, getPing());
+      }
+      if (cLogin_ != null) {
+        output.writeMessage(12, getCLogin());
+      }
+      if (sLogin_ != null) {
+        output.writeMessage(13, getSLogin());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (mesId_ != com.lirunlong.mes.Mes.MesId.m_First.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, mesId_);
+      }
+      if (ping_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, getPing());
+      }
+      if (cLogin_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, getCLogin());
+      }
+      if (sLogin_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, getSLogin());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lirunlong.mes.Mes.Msg)) {
+        return super.equals(obj);
+      }
+      com.lirunlong.mes.Mes.Msg other = (com.lirunlong.mes.Mes.Msg) obj;
+
+      boolean result = true;
+      result = result && mesId_ == other.mesId_;
+      result = result && (hasPing() == other.hasPing());
+      if (hasPing()) {
+        result = result && getPing()
+            .equals(other.getPing());
+      }
+      result = result && (hasCLogin() == other.hasCLogin());
+      if (hasCLogin()) {
+        result = result && getCLogin()
+            .equals(other.getCLogin());
+      }
+      result = result && (hasSLogin() == other.hasSLogin());
+      if (hasSLogin()) {
+        result = result && getSLogin()
+            .equals(other.getSLogin());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MESID_FIELD_NUMBER;
+      hash = (53 * hash) + mesId_;
+      if (hasPing()) {
+        hash = (37 * hash) + PING_FIELD_NUMBER;
+        hash = (53 * hash) + getPing().hashCode();
+      }
+      if (hasCLogin()) {
+        hash = (37 * hash) + C_LOGIN_FIELD_NUMBER;
+        hash = (53 * hash) + getCLogin().hashCode();
+      }
+      if (hasSLogin()) {
+        hash = (37 * hash) + S_LOGIN_FIELD_NUMBER;
+        hash = (53 * hash) + getSLogin().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lirunlong.mes.Mes.Msg parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lirunlong.mes.Mes.Msg parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lirunlong.mes.Mes.Msg parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lirunlong.mes.Mes.Msg parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lirunlong.mes.Mes.Msg parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lirunlong.mes.Mes.Msg parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lirunlong.mes.Mes.Msg parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lirunlong.mes.Mes.Msg parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lirunlong.mes.Mes.Msg parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.lirunlong.mes.Mes.Msg parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lirunlong.mes.Mes.Msg parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lirunlong.mes.Mes.Msg parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lirunlong.mes.Mes.Msg prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * +++ mes
+     * </pre>
+     *
+     * Protobuf type {@code Msg}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Msg)
+        com.lirunlong.mes.Mes.MsgOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lirunlong.mes.Mes.internal_static_Msg_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lirunlong.mes.Mes.internal_static_Msg_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lirunlong.mes.Mes.Msg.class, com.lirunlong.mes.Mes.Msg.Builder.class);
+      }
+
+      // Construct using com.lirunlong.mes.Mes.Msg.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        mesId_ = 0;
+
+        if (pingBuilder_ == null) {
+          ping_ = null;
+        } else {
+          ping_ = null;
+          pingBuilder_ = null;
+        }
+        if (cLoginBuilder_ == null) {
+          cLogin_ = null;
+        } else {
+          cLogin_ = null;
+          cLoginBuilder_ = null;
+        }
+        if (sLoginBuilder_ == null) {
+          sLogin_ = null;
+        } else {
+          sLogin_ = null;
+          sLoginBuilder_ = null;
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lirunlong.mes.Mes.internal_static_Msg_descriptor;
+      }
+
+      public com.lirunlong.mes.Mes.Msg getDefaultInstanceForType() {
+        return com.lirunlong.mes.Mes.Msg.getDefaultInstance();
+      }
+
+      public com.lirunlong.mes.Mes.Msg build() {
+        com.lirunlong.mes.Mes.Msg result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.lirunlong.mes.Mes.Msg buildPartial() {
+        com.lirunlong.mes.Mes.Msg result = new com.lirunlong.mes.Mes.Msg(this);
+        result.mesId_ = mesId_;
+        if (pingBuilder_ == null) {
+          result.ping_ = ping_;
+        } else {
+          result.ping_ = pingBuilder_.build();
+        }
+        if (cLoginBuilder_ == null) {
+          result.cLogin_ = cLogin_;
+        } else {
+          result.cLogin_ = cLoginBuilder_.build();
+        }
+        if (sLoginBuilder_ == null) {
+          result.sLogin_ = sLogin_;
+        } else {
+          result.sLogin_ = sLoginBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lirunlong.mes.Mes.Msg) {
+          return mergeFrom((com.lirunlong.mes.Mes.Msg)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lirunlong.mes.Mes.Msg other) {
+        if (other == com.lirunlong.mes.Mes.Msg.getDefaultInstance()) return this;
+        if (other.mesId_ != 0) {
+          setMesIdValue(other.getMesIdValue());
+        }
+        if (other.hasPing()) {
+          mergePing(other.getPing());
+        }
+        if (other.hasCLogin()) {
+          mergeCLogin(other.getCLogin());
+        }
+        if (other.hasSLogin()) {
+          mergeSLogin(other.getSLogin());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.lirunlong.mes.Mes.Msg parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.lirunlong.mes.Mes.Msg) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int mesId_ = 0;
+      /**
+       * <code>.MesId mesId = 1;</code>
+       */
+      public int getMesIdValue() {
+        return mesId_;
+      }
+      /**
+       * <code>.MesId mesId = 1;</code>
+       */
+      public Builder setMesIdValue(int value) {
+        mesId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.MesId mesId = 1;</code>
+       */
+      public com.lirunlong.mes.Mes.MesId getMesId() {
+        com.lirunlong.mes.Mes.MesId result = com.lirunlong.mes.Mes.MesId.valueOf(mesId_);
+        return result == null ? com.lirunlong.mes.Mes.MesId.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.MesId mesId = 1;</code>
+       */
+      public Builder setMesId(com.lirunlong.mes.Mes.MesId value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        mesId_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.MesId mesId = 1;</code>
+       */
+      public Builder clearMesId() {
+        
+        mesId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.lirunlong.mes.Mes.Ping ping_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.lirunlong.mes.Mes.Ping, com.lirunlong.mes.Mes.Ping.Builder, com.lirunlong.mes.Mes.PingOrBuilder> pingBuilder_;
+      /**
+       * <code>.Ping ping = 11;</code>
+       */
+      public boolean hasPing() {
+        return pingBuilder_ != null || ping_ != null;
+      }
+      /**
+       * <code>.Ping ping = 11;</code>
+       */
+      public com.lirunlong.mes.Mes.Ping getPing() {
+        if (pingBuilder_ == null) {
+          return ping_ == null ? com.lirunlong.mes.Mes.Ping.getDefaultInstance() : ping_;
+        } else {
+          return pingBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.Ping ping = 11;</code>
+       */
+      public Builder setPing(com.lirunlong.mes.Mes.Ping value) {
+        if (pingBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ping_ = value;
+          onChanged();
+        } else {
+          pingBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Ping ping = 11;</code>
+       */
+      public Builder setPing(
+          com.lirunlong.mes.Mes.Ping.Builder builderForValue) {
+        if (pingBuilder_ == null) {
+          ping_ = builderForValue.build();
+          onChanged();
+        } else {
+          pingBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Ping ping = 11;</code>
+       */
+      public Builder mergePing(com.lirunlong.mes.Mes.Ping value) {
+        if (pingBuilder_ == null) {
+          if (ping_ != null) {
+            ping_ =
+              com.lirunlong.mes.Mes.Ping.newBuilder(ping_).mergeFrom(value).buildPartial();
+          } else {
+            ping_ = value;
+          }
+          onChanged();
+        } else {
+          pingBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Ping ping = 11;</code>
+       */
+      public Builder clearPing() {
+        if (pingBuilder_ == null) {
+          ping_ = null;
+          onChanged();
+        } else {
+          ping_ = null;
+          pingBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Ping ping = 11;</code>
+       */
+      public com.lirunlong.mes.Mes.Ping.Builder getPingBuilder() {
+        
+        onChanged();
+        return getPingFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.Ping ping = 11;</code>
+       */
+      public com.lirunlong.mes.Mes.PingOrBuilder getPingOrBuilder() {
+        if (pingBuilder_ != null) {
+          return pingBuilder_.getMessageOrBuilder();
+        } else {
+          return ping_ == null ?
+              com.lirunlong.mes.Mes.Ping.getDefaultInstance() : ping_;
+        }
+      }
+      /**
+       * <code>.Ping ping = 11;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.lirunlong.mes.Mes.Ping, com.lirunlong.mes.Mes.Ping.Builder, com.lirunlong.mes.Mes.PingOrBuilder> 
+          getPingFieldBuilder() {
+        if (pingBuilder_ == null) {
+          pingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.lirunlong.mes.Mes.Ping, com.lirunlong.mes.Mes.Ping.Builder, com.lirunlong.mes.Mes.PingOrBuilder>(
+                  getPing(),
+                  getParentForChildren(),
+                  isClean());
+          ping_ = null;
+        }
+        return pingBuilder_;
+      }
+
+      private com.lirunlong.mes.Mes.C_Login cLogin_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.lirunlong.mes.Mes.C_Login, com.lirunlong.mes.Mes.C_Login.Builder, com.lirunlong.mes.Mes.C_LoginOrBuilder> cLoginBuilder_;
+      /**
+       * <code>.C_Login c_login = 12;</code>
+       */
+      public boolean hasCLogin() {
+        return cLoginBuilder_ != null || cLogin_ != null;
+      }
+      /**
+       * <code>.C_Login c_login = 12;</code>
+       */
+      public com.lirunlong.mes.Mes.C_Login getCLogin() {
+        if (cLoginBuilder_ == null) {
+          return cLogin_ == null ? com.lirunlong.mes.Mes.C_Login.getDefaultInstance() : cLogin_;
+        } else {
+          return cLoginBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.C_Login c_login = 12;</code>
+       */
+      public Builder setCLogin(com.lirunlong.mes.Mes.C_Login value) {
+        if (cLoginBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          cLogin_ = value;
+          onChanged();
+        } else {
+          cLoginBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.C_Login c_login = 12;</code>
+       */
+      public Builder setCLogin(
+          com.lirunlong.mes.Mes.C_Login.Builder builderForValue) {
+        if (cLoginBuilder_ == null) {
+          cLogin_ = builderForValue.build();
+          onChanged();
+        } else {
+          cLoginBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.C_Login c_login = 12;</code>
+       */
+      public Builder mergeCLogin(com.lirunlong.mes.Mes.C_Login value) {
+        if (cLoginBuilder_ == null) {
+          if (cLogin_ != null) {
+            cLogin_ =
+              com.lirunlong.mes.Mes.C_Login.newBuilder(cLogin_).mergeFrom(value).buildPartial();
+          } else {
+            cLogin_ = value;
+          }
+          onChanged();
+        } else {
+          cLoginBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.C_Login c_login = 12;</code>
+       */
+      public Builder clearCLogin() {
+        if (cLoginBuilder_ == null) {
+          cLogin_ = null;
+          onChanged();
+        } else {
+          cLogin_ = null;
+          cLoginBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.C_Login c_login = 12;</code>
+       */
+      public com.lirunlong.mes.Mes.C_Login.Builder getCLoginBuilder() {
+        
+        onChanged();
+        return getCLoginFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.C_Login c_login = 12;</code>
+       */
+      public com.lirunlong.mes.Mes.C_LoginOrBuilder getCLoginOrBuilder() {
+        if (cLoginBuilder_ != null) {
+          return cLoginBuilder_.getMessageOrBuilder();
+        } else {
+          return cLogin_ == null ?
+              com.lirunlong.mes.Mes.C_Login.getDefaultInstance() : cLogin_;
+        }
+      }
+      /**
+       * <code>.C_Login c_login = 12;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.lirunlong.mes.Mes.C_Login, com.lirunlong.mes.Mes.C_Login.Builder, com.lirunlong.mes.Mes.C_LoginOrBuilder> 
+          getCLoginFieldBuilder() {
+        if (cLoginBuilder_ == null) {
+          cLoginBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.lirunlong.mes.Mes.C_Login, com.lirunlong.mes.Mes.C_Login.Builder, com.lirunlong.mes.Mes.C_LoginOrBuilder>(
+                  getCLogin(),
+                  getParentForChildren(),
+                  isClean());
+          cLogin_ = null;
+        }
+        return cLoginBuilder_;
+      }
+
+      private com.lirunlong.mes.Mes.S_Login sLogin_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.lirunlong.mes.Mes.S_Login, com.lirunlong.mes.Mes.S_Login.Builder, com.lirunlong.mes.Mes.S_LoginOrBuilder> sLoginBuilder_;
+      /**
+       * <code>.S_Login s_login = 13;</code>
+       */
+      public boolean hasSLogin() {
+        return sLoginBuilder_ != null || sLogin_ != null;
+      }
+      /**
+       * <code>.S_Login s_login = 13;</code>
+       */
+      public com.lirunlong.mes.Mes.S_Login getSLogin() {
+        if (sLoginBuilder_ == null) {
+          return sLogin_ == null ? com.lirunlong.mes.Mes.S_Login.getDefaultInstance() : sLogin_;
+        } else {
+          return sLoginBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.S_Login s_login = 13;</code>
+       */
+      public Builder setSLogin(com.lirunlong.mes.Mes.S_Login value) {
+        if (sLoginBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          sLogin_ = value;
+          onChanged();
+        } else {
+          sLoginBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.S_Login s_login = 13;</code>
+       */
+      public Builder setSLogin(
+          com.lirunlong.mes.Mes.S_Login.Builder builderForValue) {
+        if (sLoginBuilder_ == null) {
+          sLogin_ = builderForValue.build();
+          onChanged();
+        } else {
+          sLoginBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.S_Login s_login = 13;</code>
+       */
+      public Builder mergeSLogin(com.lirunlong.mes.Mes.S_Login value) {
+        if (sLoginBuilder_ == null) {
+          if (sLogin_ != null) {
+            sLogin_ =
+              com.lirunlong.mes.Mes.S_Login.newBuilder(sLogin_).mergeFrom(value).buildPartial();
+          } else {
+            sLogin_ = value;
+          }
+          onChanged();
+        } else {
+          sLoginBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.S_Login s_login = 13;</code>
+       */
+      public Builder clearSLogin() {
+        if (sLoginBuilder_ == null) {
+          sLogin_ = null;
+          onChanged();
+        } else {
+          sLogin_ = null;
+          sLoginBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.S_Login s_login = 13;</code>
+       */
+      public com.lirunlong.mes.Mes.S_Login.Builder getSLoginBuilder() {
+        
+        onChanged();
+        return getSLoginFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.S_Login s_login = 13;</code>
+       */
+      public com.lirunlong.mes.Mes.S_LoginOrBuilder getSLoginOrBuilder() {
+        if (sLoginBuilder_ != null) {
+          return sLoginBuilder_.getMessageOrBuilder();
+        } else {
+          return sLogin_ == null ?
+              com.lirunlong.mes.Mes.S_Login.getDefaultInstance() : sLogin_;
+        }
+      }
+      /**
+       * <code>.S_Login s_login = 13;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.lirunlong.mes.Mes.S_Login, com.lirunlong.mes.Mes.S_Login.Builder, com.lirunlong.mes.Mes.S_LoginOrBuilder> 
+          getSLoginFieldBuilder() {
+        if (sLoginBuilder_ == null) {
+          sLoginBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.lirunlong.mes.Mes.S_Login, com.lirunlong.mes.Mes.S_Login.Builder, com.lirunlong.mes.Mes.S_LoginOrBuilder>(
+                  getSLogin(),
+                  getParentForChildren(),
+                  isClean());
+          sLogin_ = null;
+        }
+        return sLoginBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:Msg)
+    }
+
+    // @@protoc_insertion_point(class_scope:Msg)
+    private static final com.lirunlong.mes.Mes.Msg DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lirunlong.mes.Mes.Msg();
+    }
+
+    public static com.lirunlong.mes.Mes.Msg getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Msg>
+        PARSER = new com.google.protobuf.AbstractParser<Msg>() {
+      public Msg parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Msg(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Msg> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Msg> getParserForType() {
+      return PARSER;
+    }
+
+    public com.lirunlong.mes.Mes.Msg getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Ping_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_Ping_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_TestMes_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_TestMes_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_C_Login_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_C_Login_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_S_Login_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_S_Login_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CubeRotation_descriptor;
   private static final 
@@ -1785,6 +4370,11 @@ public final class Mes {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_Vector3_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Msg_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_Msg_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1794,11 +4384,16 @@ public final class Mes {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\tmes.proto\"%\n\007TestMes\022\013\n\003mes\030\001 \001(\t\022\r\n\005m" +
-      "esId\030\002 \001(\005\")\n\014CubeRotation\022\031\n\007vector3\030\001 " +
-      "\001(\0132\010.Vector3\"*\n\007Vector3\022\t\n\001x\030\001 \001(\002\022\t\n\001y" +
-      "\030\002 \001(\002\022\t\n\001z\030\003 \001(\002B\023\n\021com.lirunlong.mesb\006" +
-      "proto3"
+      "\n\tmes.proto\"\006\n\004Ping\"%\n\007TestMes\022\013\n\003mes\030\001 " +
+      "\001(\t\022\r\n\005mesId\030\002 \001(\005\"\033\n\007C_Login\022\020\n\010userNam" +
+      "e\030\001 \001(\t\"\030\n\007S_Login\022\r\n\005isSuc\030\001 \001(\005\")\n\014Cub" +
+      "eRotation\022\031\n\007vector3\030\001 \001(\0132\010.Vector3\"*\n\007" +
+      "Vector3\022\t\n\001x\030\001 \001(\002\022\t\n\001y\030\002 \001(\002\022\t\n\001z\030\003 \001(\002" +
+      "\"g\n\003Msg\022\025\n\005mesId\030\001 \001(\0162\006.MesId\022\023\n\004ping\030\013" +
+      " \001(\0132\005.Ping\022\031\n\007c_login\030\014 \001(\0132\010.C_Login\022\031" +
+      "\n\007s_login\030\r \001(\0132\010.S_Login*>\n\005MesId\022\013\n\007m_" +
+      "First\020\000\022\n\n\006m_Ping\020\013\022\r\n\tm_C_Login\020\014\022\r\n\tm_" +
+      "S_Login\020\rB\023\n\021com.lirunlong.mesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1812,24 +4407,48 @@ public final class Mes {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_TestMes_descriptor =
+    internal_static_Ping_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_Ping_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_Ping_descriptor,
+        new java.lang.String[] { });
+    internal_static_TestMes_descriptor =
+      getDescriptor().getMessageTypes().get(1);
     internal_static_TestMes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_TestMes_descriptor,
         new java.lang.String[] { "Mes", "MesId", });
+    internal_static_C_Login_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_C_Login_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_C_Login_descriptor,
+        new java.lang.String[] { "UserName", });
+    internal_static_S_Login_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_S_Login_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_S_Login_descriptor,
+        new java.lang.String[] { "IsSuc", });
     internal_static_CubeRotation_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_CubeRotation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CubeRotation_descriptor,
         new java.lang.String[] { "Vector3", });
     internal_static_Vector3_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_Vector3_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Vector3_descriptor,
         new java.lang.String[] { "X", "Y", "Z", });
+    internal_static_Msg_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_Msg_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_Msg_descriptor,
+        new java.lang.String[] { "MesId", "Ping", "CLogin", "SLogin", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
