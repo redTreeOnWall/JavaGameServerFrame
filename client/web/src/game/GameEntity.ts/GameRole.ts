@@ -79,8 +79,8 @@ export class GamePlayer extends GameRole {
         }
         let yy = this.mesh.rotation.y
 
-        this.mesh.position.x += Math.cos(yy)*0.1
-        this.mesh.position.z += Math.sin(yy)*0.1
+        this.mesh.position.x += Math.cos(yy)*0.01
+        this.mesh.position.z += Math.sin(yy)*0.01
     }
 }
 
