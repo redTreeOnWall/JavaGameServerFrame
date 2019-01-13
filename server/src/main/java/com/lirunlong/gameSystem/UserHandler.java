@@ -63,7 +63,7 @@ public class UserHandler {
             case m_C_Login:
                 String userId = mes.getCLogin().getUserName();
                 if(uMng().users.containsKey(userId)){
-                    System.out.println("重复登陆！！");
+                    System.out.println("repeat login！！");
                     Mes.Msg mlogin = Mes.Msg.newBuilder()
                             .setMesId(Mes.MesId.m_S_Login)
                             .setSLogin(Mes.S_Login.newBuilder().setIsSuc(0)).build();
@@ -74,7 +74,7 @@ public class UserHandler {
                 //TODO:从数据库判断并构建
                 user =  new User();
                 user.setUserId(userId);
-                System.out.println(user+" 登入");
+                System.out.println(user+" login");
                 uMng().showUsers();
                 Mes.Msg mlogin = Mes.Msg.newBuilder()
                         .setMesId(Mes.MesId.m_S_Login)
@@ -89,7 +89,7 @@ public class UserHandler {
     public void onErrOrClose(){
         if(user !=null && uMng().users.containsKey(user.getUserId())){
             uMng().users.remove(user.getUserId());
-            System.out.println(user+" 退出");
+            System.out.println(user+" logout");
             uMng().showUsers();
         }
     }

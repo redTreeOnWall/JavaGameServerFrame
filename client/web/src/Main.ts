@@ -3,18 +3,27 @@ import { NetConnecter } from "./net/NetConnecter";
 import { Msg, MesId, Ping, C_Login } from "./mes/mes";
 import { PingLooper } from "./game/GameLoops/PingLooper";
 import { ThreeLooper } from "./game/GameLoops/ThreeLoop";
+import { Test } from "./test/Test";
+import { BallGames } from "./game/GameLoops/games/BallGames";
 
 
+// Test.TestMsgIdSize();
+var vi = ()=>{
+    BallGames.Debug()
+}
 
-
+console.log(vi)
 
 var game = Game.Ins()
-
+game.start();
+game.add(new BallGames());
+/*
 var net = NetConnecter.ins()
 
 let onLogin = ()=>{
     game.add(new PingLooper())
-    game.add(new ThreeLooper())
+    // game.add(new ThreeLooper())
+    game.add(new BallGames());
 }
 
 net.AddConnectListener(() => {
@@ -39,6 +48,6 @@ net.AddConnectListener(() => {
     login.userName = Math.random().toString()
     loginmes.cLogin = login
     NetConnecter.ins().send(loginmes)
-
-
 })
+
+*/

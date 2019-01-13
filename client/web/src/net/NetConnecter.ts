@@ -42,7 +42,7 @@ export class NetConnecter{
 
     private isConnected = false
 
-    private ws:WebSocket;
+    public ws:WebSocket;
     private url:string;
     constructor(addr:string){
         this.url = addr

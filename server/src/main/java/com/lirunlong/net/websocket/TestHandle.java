@@ -17,11 +17,12 @@ public class TestHandle implements IWebSocketMesHandle{
         userHandler.setCtx(ctx);
         if(frame instanceof BinaryWebSocketFrame){
             BinaryWebSocketFrame da = (BinaryWebSocketFrame)frame;
-
             ByteBuf buf = da.content();
-
             byte[] array = new byte[buf.capacity()];
             buf.readBytes(array);
+//            short msgId = (short) (((array[1] << 8 ) | array[0] & 0xff));
+//            System.out.println(msgId);
+
             try {
                 Mes.Msg m = Mes.Msg.parseFrom(array);
                 userHandler.OnMesGet(m);
