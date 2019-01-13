@@ -11,7 +11,7 @@ export class ThreeLooper implements GameLoop {
     mePlayer :MePlayer
     constructor() {
         this.renderer.setSize(window.innerWidth,window.innerHeight);
-        document.body.append(this.renderer.domElement)
+        document.body.appendChild(this.renderer.domElement)
         this.mePlayer  = new MePlayer(this.scene)
         this.mePlayer.mesh.add (this.camera)
         this.camera.position.z = this.mePlayer.mesh.position.z +3
